@@ -119,6 +119,9 @@ po_19_dict = po_19.set_index(['p', 'd', 't_month']).T.to_dict('list')
 #combine 2019 and 2020 data
 po_data= po_19.append([po_20])
 
+#po_dict
+po_dict = po_data.set_index(['p', 'd', 't_month', 't_year']).T.to_dict('list')
+
 #Forecast Data
 forecast = pd.read_excel("Actuals December 2020.xlsx", sheet_name = 'Data-12.23')
 
